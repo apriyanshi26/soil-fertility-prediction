@@ -17,93 +17,108 @@ st.set_page_config(
 st.markdown("""
 <style>
 
+/* Main background */
 .stApp {
     background-color: #F5F7F0;
 }
 
-[data-testid="stHeader"] {
-    background-color: transparent;
-}
-
+/* Main content spacing */
 .block-container {
     padding-top: 2rem;
     padding-bottom: 2rem;
     max-width: 1200px;
 }
 
-h1, h2, h3 {
-    color: #174D35;
+/* All headings */
+.stApp h1,
+.stApp h2,
+.stApp h3,
+.stApp h4 {
+    color: #174D35 !important;
+    -webkit-text-fill-color: #174D35 !important;
 }
 
-p, label {
-    color: #405548;
+/* Normal text */
+.stApp p,
+.stApp label,
+.stApp .stMarkdown {
+    color: #344A3D;
 }
 
+/* Header card */
 .hero {
     background: linear-gradient(120deg, #174D35, #367B50);
     padding: 35px;
     border-radius: 18px;
-    color: white;
     margin-bottom: 25px;
 }
 
 .hero h1 {
-    color: white;
+    color: white !important;
+    -webkit-text-fill-color: white !important;
     font-size: 38px;
-    margin-bottom: 8px;
 }
 
 .hero p {
-    color: #E0F0E4;
-    font-size: 16px;
+    color: #FFFFFF !important;
 }
 
-.section-card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 14px;
-    border: 1px solid #E2E9DF;
-    margin-bottom: 15px;
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background-color: #EAF1E8;
 }
 
-.result-card {
-    background: linear-gradient(120deg, #174D35, #367B50);
-    padding: 25px;
-    border-radius: 16px;
-    color: white;
-    text-align: center;
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3,
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] label {
+    color: #174D35 !important;
+    -webkit-text-fill-color: #174D35 !important;
 }
 
-.result-card h2 {
-    color: white;
-    font-size: 30px;
+/* Input fields */
+[data-testid="stNumberInput"] input {
+    color: #263B30 !important;
+    background-color: #FFFFFF !important;
 }
 
-.result-card p {
-    color: #E0F0E4;
-}
-
+/* Buttons */
 div.stButton > button,
 div.stFormSubmitButton > button {
-    background-color: #236B45;
-    color: white;
+    background-color: #236B45 !important;
+    color: white !important;
     border-radius: 10px;
     border: none;
     min-height: 45px;
     font-weight: 600;
 }
 
+div.stButton > button p,
+div.stFormSubmitButton > button p {
+    color: white !important;
+}
+
 div.stButton > button:hover,
 div.stFormSubmitButton > button:hover {
-    background-color: #174D35;
-    color: white;
-    border: none;
+    background-color: #174D35 !important;
 }
 
-[data-testid="stSidebar"] {
-    background-color: #EAF1E8;
+/* Result card */
+.result-card {
+    background: linear-gradient(120deg, #174D35, #367B50);
+    padding: 25px;
+    border-radius: 16px;
+    text-align: center;
 }
 
+.result-card h2,
+.result-card p {
+    color: white !important;
+    -webkit-text-fill-color: white !important;
+}
+
+/* Dividers */
 hr {
     border-color: #DCE6DA;
 }
